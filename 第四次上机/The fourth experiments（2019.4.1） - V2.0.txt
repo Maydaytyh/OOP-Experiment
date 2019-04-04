@@ -1,0 +1,70 @@
+1. The Vehicle is composed of Frame, CarDoor and Tyre.
+    1) The statement, cin >> Frame, means that we can input ID and weight of Frame.
+
+    2) The statement, cin >> Cardoor, means that we can input number and color of CarDoor.
+
+    3) The statement, cin >> Tyre, means that we can input number of Tyre¡£
+
+    4) The statement, cout << Vehicle, means that we can output ID, number of door and tyre.
+
+Write the codes and finish these demands as above.
+
+Note£º1) DON'T define global variables.
+      2) Note there four classes in this program.
+
+
+
+
+2. Define MyString class with demands as follows:
+   2.1  The class, MyString, can save any string which means an arbitary length;
+
+   2.2  Overload operator+() to append string to another one;
+
+   2.3  Define Index() function to locate the first position of searching a character or a string;
+
+   2.4  Define Mid() function to get substring from one string;
+
+   2.5  The client can use MyString you defined like as in the main:
+
+   void main()
+   {
+       MyString s1("China"), s2;
+
+       s2 = "Love";
+       cout << "I" + s2 + s1;
+
+       int pos = s1.Find('a');     // pos is 4, or -1 if  'a'  is not found.
+
+       int a = 1, b = 3;
+       MyString my = s2.Mid(a, b); // a represents starting position, b represents the length. So Mid can get a substring.
+   }
+
+   NOTE: The type such as string and template in C++, and string library in C and C++ are both FORBIDDEN in your program.
+         The only one you can define is POINTER or REFERENCE.
+
+
+
+3. Define InternetURL class to save a URL string like as "http://jwc.bit.edu.cn/dlpy/142963.htm"£¬and finish the demands as follows:
+   3.1  Very important: Use MyString you just finished before to save URL string£»
+                        The type of char* and C/C++ string library are FORBIDDEN.
+
+   3.2  Define member function getDomain() to get domain from URL. 
+        For example, we can get   "http://jwc.bit.edu.cn"   from "http://jwc.bit.edu.cn/dlpy/142963.htm"£»
+
+   3.3  Define member function getDomainCountry() to get country name in the domain from URL, such as "us", "uk", etc.
+        For example, we can get   "cn"   from """http://jwc.bit.edu.cn/dlpy/142963.htm"£»
+
+   3.4  Define member function getDomainType() to get domain type from URL, such as "gov", "com", "org", and so on.
+        For example, we can get   "edu"   from """http://jwc.bit.edu.cn/dlpy/142963.htm"£»
+
+   3.5  The client can use MyString you defined like as in the main:
+        void main()
+   	{
+       		InternetURL URL("http://jwc.bit.edu.cn/dlpy/142963.htm"), s2;
+       		
+       		cout << URL.GetDomain();         // The result is:  http://jwc.bit.edu.cn
+
+       		cout << URL.GetDomainCountry();  // The result is:  cn
+
+                cout << URL.GetDomainType();     // The result is:  edu
+   	}
